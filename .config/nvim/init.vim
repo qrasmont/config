@@ -15,8 +15,8 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
 
-Plug 'fatih/vim#-go', { 'do': ':GoUpdateBinaries' }
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
 
@@ -57,7 +57,8 @@ endif
 
 " Set the color theme
 syntax on
-color dracula
+colorscheme onehalfdark
+let g:lightline = { 'colorscheme': 'onehalfdark' }
 
 " =============================================================================
 " # Editor settings
