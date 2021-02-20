@@ -17,6 +17,7 @@ Plug 'rust-lang/rust.vim'
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -73,6 +74,13 @@ set smartindent
 set undodir=~/.vimdid
 set undofile
 
+" Ale linters fixers
+let g:ale_linters = {'python': ['flake8']}
+let g:ale_fixers = {'*': [], 'python': ['black', 'isort']}
+let g:ale_fix_on_save = 1
+
+" Support pytthon
+let g:python3_host_prog = '/usr/bin/python3'
 " =============================================================================
 " # GUI settings
 " =============================================================================
@@ -82,6 +90,7 @@ set relativenumber "Show line number relative to current
 set ruler "Show the ruler
 set showcmd "Show commands in status line
 set mouse=a "Enable mouse usage
+set colorcolumn=80
 
 " =============================================================================
 " " # Keyboard shortcuts
