@@ -99,6 +99,9 @@ set colorcolumn=80
 " "
 " =============================================================================
 
+" Set leader key to SPC
+let mapleader=" "
+
 " No arrow keys --- force yourself to use the home row
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -107,6 +110,8 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+noremap <leader>w :w<cr>
+noremap <leader>q :q<cr>
 " Neat X clipboard integration
 " ,p will paste clipboard into buffer
 " ,c will copy entire buffer into clipboard
