@@ -92,7 +92,8 @@ set relativenumber "Show line number relative to current
 set ruler "Show the ruler
 set showcmd "Show commands in status line
 set mouse=a "Enable mouse usage
-set colorcolumn=80
+set colorcolumn=80 " Show column limit
+set nowrap " Don't wrap lines that don't fit the screen
 
 " =============================================================================
 " " # Keyboard shortcuts
