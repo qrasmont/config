@@ -61,6 +61,8 @@ syntax on
 colorscheme onehalfdark
 let g:lightline = { 'colorscheme': 'onehalfdark' }
 
+highlight Pmenu ctermbg=black guibg=black
+highlight Pmenu ctermfg=white guifg=white
 " =============================================================================
 " # Editor settings
 " =============================================================================
