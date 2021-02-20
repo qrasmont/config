@@ -101,6 +101,13 @@ export PATH="$PATH:/home/quentin/android-studio/bin"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gl="git log"
+alias gd="git diff"
+alias gdd="git diff HEAD~1 HEAD"
+alias gs="git status"
+alias glg="git log --all --decorate --oneline --graph"
+alias v="nvim"
+
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -121,3 +128,5 @@ export PATH="$HOME/.local/bin:$PATH"
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+
+eval "$(starship init zsh)"

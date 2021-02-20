@@ -120,3 +120,5 @@ fi
 export OPENSSL_DIR=/usr/lib/ssl1.0/
 export PATH="$PATH:/home/quentin/ARM_Compiler_5/bin"
 export PATH=$PATH:/usr/local/go/bin
+
+eval "$(starship init bash)"
