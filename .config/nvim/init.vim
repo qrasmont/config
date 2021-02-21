@@ -111,8 +111,19 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+" save & quit keybindings
 noremap <leader>w :w<cr>
 noremap <leader>q :q<cr>
+
+" FZF keybindings
+noremap <leader>ff :FZF<cr>
+noremap <leader>fg :FZF ~<cr>
+noremap <leader>fd :FZF ~/.config<cr>
+
+" Buffer keybindings
+noremap <leader>, :bp<cr>
+noremap <leader>; :bn<cr>
+
 " Neat X clipboard integration
 " ,p will paste clipboard into buffer
 " ,c will copy entire buffer into clipboard
