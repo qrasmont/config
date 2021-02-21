@@ -129,4 +129,5 @@ export PATH="$HOME/.local/bin:$PATH"
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
+export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
