@@ -94,6 +94,11 @@ set showcmd "Show commands in status line
 set mouse=a "Enable mouse usage
 set colorcolumn=80 " Show column limit
 set nowrap " Don't wrap lines that don't fit the screen
+set tabstop=4 " Nbr of spaces a tabs will take
+set nohlsearch " Don't keep the highlight when search is over
+set incsearch " Incrementaly highlight as you type
+set scrolloff=8 " Start scrolling 8 lines before end of screen
+set signcolumn=yes " Add an extra column on the left for linters,etc
 
 " =============================================================================
 " " # Keyboard shortcuts
@@ -116,7 +121,7 @@ noremap <leader>w :w<cr>
 noremap <leader>q :q<cr>
 
 " FZF keybindings
-noremap <leader>ff :FZF<cr>
+noremap <leader>ff :FZF ./<cr>
 noremap <leader>fg :FZF ~<cr>
 noremap <leader>fd :FZF ~/.config<cr>
 
