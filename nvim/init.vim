@@ -130,6 +130,10 @@ noremap <leader>fd :FZF ~/.config<cr>
 " Buffer keybindings
 noremap <leader>, :bp<cr>
 noremap <leader>; :bn<cr>
+noremap <leader>bk :bd<cr>
+noremap <leader>v :vsplit<cr>
+noremap <leader>h :split<cr>
+nnoremap <Leader>s <C-w><C-w>
 
 " Neat X clipboard integration
 " ,p will paste clipboard into buffer
