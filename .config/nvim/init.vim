@@ -95,6 +95,8 @@ set mouse=a "Enable mouse usage
 set colorcolumn=80 " Show column limit
 set nowrap " Don't wrap lines that don't fit the screen
 set tabstop=4 " Nbr of spaces a tabs will take
+set softtabstop=4
+set shiftwidth=4
 set nohlsearch " Don't keep the highlight when search is over
 set incsearch " Incrementaly highlight as you type
 set scrolloff=8 " Start scrolling 8 lines before end of screen
