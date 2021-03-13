@@ -18,6 +18,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'dense-analysis/ale'
+Plug 'ap/vim-buftabline'
 
 call plug#end()
 
@@ -76,10 +77,12 @@ set smartindent
 set undodir=~/.vimdid
 set undofile
 
+set hidden
+
 " Ale linters fixers
 let g:ale_linters = {'python': ['flake8']}
 let g:ale_fixers = {'*': [], 'python': ['black', 'isort']}
-let g:ale_fix_on_save = 1
+" let g:ale_fix_on_save = 1
 
 " Support pytthon
 let g:python3_host_prog = '/usr/bin/python3'
@@ -102,6 +105,11 @@ set incsearch " Incrementaly highlight as you type
 set scrolloff=8 " Start scrolling 8 lines before end of screen
 set signcolumn=yes " Add an extra column on the left for linters,etc
 
+"Open FZF and choose floating window
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.8 } }
+
+set list
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " =============================================================================
 " " # Keyboard shortcuts
 " "
@@ -123,7 +131,8 @@ noremap <leader>w :w<cr>
 noremap <leader>q :q<cr>
 
 " FZF keybindings
-noremap <leader>ff :FZF ./<cr>
+noremap <leader>ff :Files<cr>
+noremap <leader>fs :Rg<cr>
 noremap <leader>fg :FZF ~<cr>
 noremap <leader>fd :FZF ~/.config<cr>
 
