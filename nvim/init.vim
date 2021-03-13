@@ -19,6 +19,10 @@ Plug 'dense-analysis/ale'
 Plug 'ap/vim-buftabline'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 " COC Completion
@@ -134,6 +138,11 @@ noremap <leader>bk :bd<cr>
 noremap <leader>v :vsplit<cr>
 noremap <leader>h :split<cr>
 nnoremap <Leader>s <C-w><C-w>
+
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 " Neat X clipboard integration
 " ,p will paste clipboard into buffer
