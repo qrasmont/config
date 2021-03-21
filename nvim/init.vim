@@ -153,15 +153,15 @@ vnoremap K :m '<-2<CR>gv=gv
 " ,p will paste clipboard into buffer
 " ,c will copy entire buffer into clipboard
 noremap <leader>p :read !xsel --clipboard --output<cr>
-noremap <leader>c :w !xsel -ib<cr><cr>
+noremap <leader>y :w !xsel -ib<cr><cr>
 
 " 'Smart' nevigation
-nmap <leader> E <Plug>(coc-diagnostic-prev)
-nmap <leader> W <Plug>(coc-diagnostic-next)
-nmap <leader> gd <Plug>(coc-definition)
-nmap <leader> gy <Plug>(coc-type-definition)
-nmap <leader> gi <Plug>(coc-implementation)
-nmap <leader> gr <Plug>(coc-references)
+nmap <leader> cp <Plug>(coc-diagnostic-prev)
+nmap <leader> cn <Plug>(coc-diagnostic-next)
+nmap <leader> cd <Plug>(coc-definition)
+nmap <leader> cy <Plug>(coc-type-definition)
+nmap <leader> ci <Plug>(coc-implementation)
+nmap <leader> cr <Plug>(coc-references)
 " Use K to show documentation in preview window
 nnoremap <silent> H :call <SID>show_documentation()<CR>
 function! s:show_documentation()
