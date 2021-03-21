@@ -85,7 +85,7 @@ set hidden
 " Ale linters fixers
 let g:ale_linters = {'python': ['flake8']}
 let g:ale_fixers = {'*': [], 'python': ['black', 'isort']}
-" let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 1
 
 " Support pytthon
 let g:python3_host_prog = '/usr/bin/python3'
@@ -129,7 +129,8 @@ inoremap <right> <nop>
 
 " save & quit keybindings
 noremap <leader>w :w<cr>
-noremap <leader>q :q<cr>
+noremap <leader>qq :q<cr>
+noremap <leader>qf :q!<cr>
 
 " Buffer keybindings
 noremap <leader>, :bp<cr>
@@ -144,6 +145,10 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
+" Cool binding from ThePrimeagen to move highlighted text
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " Neat X clipboard integration
 " ,p will paste clipboard into buffer
 " ,c will copy entire buffer into clipboard
@@ -151,14 +156,14 @@ noremap <leader>p :read !xsel --clipboard --output<cr>
 noremap <leader>c :w !xsel -ib<cr><cr>
 
 " 'Smart' nevigation
-nmap <silent> E <Plug>(coc-diagnostic-prev)
-nmap <silent> W <Plug>(coc-diagnostic-next)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <leader> E <Plug>(coc-diagnostic-prev)
+nmap <leader> W <Plug>(coc-diagnostic-next)
+nmap <leader> gd <Plug>(coc-definition)
+nmap <leader> gy <Plug>(coc-type-definition)
+nmap <leader> gi <Plug>(coc-implementation)
+nmap <leader> gr <Plug>(coc-references)
 " Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> H :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
