@@ -89,6 +89,9 @@ let g:ale_fix_on_save = 1
 
 " Support pytthon
 let g:python3_host_prog = '/usr/bin/python3'
+
+let g:rooter_patterns = ['.git']
+
 " =============================================================================
 " # GUI settings
 " =============================================================================
@@ -103,6 +106,7 @@ set nowrap " Don't wrap lines that don't fit the screen
 set tabstop=4 " Nbr of spaces a tabs will take
 set softtabstop=4
 set shiftwidth=4
+set expandtab
 set nohlsearch " Don't keep the highlight when search is over
 set incsearch " Incrementaly highlight as you type
 set scrolloff=8 " Start scrolling 8 lines before end of screen
