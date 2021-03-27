@@ -25,6 +25,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'mhinz/vim-startify'
+
+Plug 'edluffy/specs.nvim', {'branch': 'main'}
 call plug#end()
 
 " COC Completion
@@ -102,6 +104,24 @@ let g:startify_lists = [
             \ { 'type': 'dir',       'header': ['   Current dir '. getcwd()] },
             \ { 'type': 'bookmarks', 'header': ['   Config']      },
             \ ]
+" =============================================================================
+" # Specs config
+" =============================================================================
+lua << EOF
+require('specs').setup{
+    show_jumps  = true,
+    min_jump = 30,
+    popup = {
+        delay_ms = 0, -- delay before popup displays
+        inc_ms = 10, -- time increments used for fade/resize effects 
+        blend = 10, -- starting blend, between 0-100 (fully transparent), see :h winblend
+        width = 10,
+        winhl = "PMenu",
+        fader = require('specs').linear_fader,
+        resizer = require('specs').shrink_resizer
+    }
+}
+EOF
 " =============================================================================
 " # Editor settings
 " =============================================================================
