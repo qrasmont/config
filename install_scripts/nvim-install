@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Ensure folder exists
+mkdir -p ~/.config/nvim/plugin
+mkdir -p ~/.config/nvim/after/plugin
+mkdir -p ~/.config/nvim/lua
+
+# simlink baby !!
+echo "Simlink for init.vim"
+echo "--------------------"
+rm -rf ~/.config/nvim/init.vim
+ln -s ~/dev/personal/dot_config/nvim/init.vim ~/.config/nvim/init.vim
+
+
+echo "Simlink for plugin"
+echo "------------------"
+for f in `find ~/.config/nvim/plugin -regex ".*\.vim$\|.*\.lua$" -printf "%f\n"`; do
+    echo "~/.config/nvim/plugin/$f"
+    rm -rf ~/.config/nvim/plugin/$f
+    ln -s ~/dev/personal/dot_config/nvim/plugin/$f ~/.config/nvim/plugin/$f
+done
+
+echo "Simlink for after/plugin"
+echo "------------------------"
+for f in `find ~/.config/nvim/after/plugin -regex ".*\.vim$\|.*\.lua$" -printf "%f\n"`; do
+    echo "~/.config/nvim/after/plugin/$f"
+    rm -rf ~/.config/nvim/after/plugin/$f
+    ln -s ~/dev/personal/dot_config/nvim/after/$f ~/.config/nvim/after/plugin/$f
+done
+
+echo "Simlink for lua"
+echo "---------------"
+for f in `find ~/.config/nvim/lua -regex ".*\.vim$\|.*\.lua$" -printf "%f\n"`; do
+    echo "~/.config/nvim/lua/$f"
+    rm -rf ~/.config/nvim/lua/$f
+    ln -s ~/dev/personal/dot_config/nvim/lua/$f ~/.config/nvim/lua/$f
+done
+
+echo "DONE!!"
