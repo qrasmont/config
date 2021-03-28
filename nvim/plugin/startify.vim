@@ -22,6 +22,7 @@ let g:startify_bookmarks = [
             \ {'a': '~/.config/alacritty/alacritty.yml'},
             \ {'h': '~/.zsh_history'},
             \ {'n': '~/.config/nvim/init.vim'},
+            \ {'p': '~/.config/nvim/plugin'},
             \ {'t': '~/.tmux.conf'},
             \ {'z': '~/.zshrc'},
             \ ]
