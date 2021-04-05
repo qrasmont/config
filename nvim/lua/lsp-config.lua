@@ -31,6 +31,15 @@ require'lspconfig'.sumneko_lua.setup {
     }
 }
 
+vim.g.completion_chain_complete_list = {
+  default = {
+    { complete_items = { 'lsp' } },
+    { complete_items = { 'buffers' } },
+    { mode = { '<c-p>' } },
+    { mode = { '<c-n>' } }
+  },
+}
+
 vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {})
 vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {})
 vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {})

@@ -10,6 +10,7 @@ return require('packer').startup(function()
 
     use {'neovim/nvim-lspconfig'}
     use {'nvim-lua/completion-nvim'}
+    use {'steelsojka/completion-buffers'}
 
     use {'dense-analysis/ale'}
     use {'ap/vim-buftabline'}
