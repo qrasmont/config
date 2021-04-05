@@ -34,3 +34,6 @@ require('lsp-config')
 
 -- Load tree-sitter config
 require('treesitter')
+
+-- Load lua line config
+require('lualine-config')
