@@ -21,4 +21,9 @@ return require('packer').startup(function()
     use {'nvim-telescope/telescope.nvim'}
 
     use {'mhinz/vim-startify'}
+
+    use {'jiangmiao/auto-pairs'}
+
+    use {'tpope/vim-commentary'}
+    use {'tpope/vim-fugitive'}
 end)
