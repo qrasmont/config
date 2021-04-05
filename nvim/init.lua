@@ -31,3 +31,6 @@ require('telescope')
 
 -- Load lsp config (c, lua)
 require('lsp-config')
+
+-- Load tree-sitter config
+require('treesitter')
