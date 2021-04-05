@@ -30,3 +30,9 @@ vim.api.nvim_set_keymap('v', 'K', ':m \'<-2<CR>gv=gv', {})
 -- ,c will copy entire buffer into clipboard
 vim.api.nvim_set_keymap('n', '<leader>p', ':read !xsel --clipboard --output<cr>', {})
 vim.api.nvim_set_keymap('n', '<leader>y', ':w !xsel -ib<cr><cr>', {})
+
+-- Quick fix list
+vim.api.nvim_set_keymap('n', '<leader>co', ':copen<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>cc', ':cclose<cr>', {})
+vim.api.nvim_set_keymap('n', '<C-n>', ':cnext<cr>', {})
+vim.api.nvim_set_keymap('n', '<C-p>', ':cprev<cr>', {})

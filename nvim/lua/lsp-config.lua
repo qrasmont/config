@@ -31,11 +31,9 @@ require'lspconfig'.sumneko_lua.setup {
     }
 }
 
-vim.api.nvim_set_keymap('n', '<silent> gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {})
-vim.api.nvim_set_keymap('n', '<silent> gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {})
-vim.api.nvim_set_keymap('n', '<silent> gr', '<cmd>lua vim.lsp.buf.references()<CR>', {})
-vim.api.nvim_set_keymap('n', '<silent> gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {})
-vim.api.nvim_set_keymap('n', '<silent> K', '<cmd>lua vim.lsp.buf.hover()<CR>', {})
-vim.api.nvim_set_keymap('n', '<silent> <C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {})
-vim.api.nvim_set_keymap('n', '<silent> <C-n>', '<cmd>lua vim.lsp.buf.goto_prev()<CR>', {})
-vim.api.nvim_set_keymap('n', '<silent> <C-p>', '<cmd>lua vim.lsp.buf.goto_next()<CR>', {})
+vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {})
+vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {})
+vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {})
+vim.api.nvim_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {})
+vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {})
+vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {})
