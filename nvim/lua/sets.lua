@@ -1,3 +1,5 @@
+USER = vim.fn.expand('$USER')
+
 vim.wo.number = true
 vim.wo.relativenumber = true
 
@@ -6,7 +8,7 @@ vim.o.hidden = true
 vim.bo.autoindent = true
 vim.bo.smartindent = true
 
-vim.o.undodir = '~/.vimdid'
+vim.o.undodir = 'home/' .. USER .. '/.vimdid'
 vim.o.undofile = true
 
 vim.o.ruler = true
