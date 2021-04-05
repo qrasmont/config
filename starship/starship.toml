@@ -16,7 +16,7 @@ error_symbol = "[🤘](bold fg:6)"
 
 [git_branch]
 format = "[\\($branch\\)]($style) "
-style = "bold italic fg:221"
+style = "bold italic fg:208"
 
 [directory]
 truncation_length = 1
