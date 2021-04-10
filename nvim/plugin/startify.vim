@@ -21,7 +21,8 @@ let g:startify_custom_header = g:ascii
 let g:startify_bookmarks = [
             \ {'a': '~/.config/alacritty/alacritty.yml'},
             \ {'h': '~/.zsh_history'},
-            \ {'n': '~/.config/nvim/init.vim'},
+            \ {'l': '~/.config/nvim/lua'},
+            \ {'n': '~/.config/nvim/init.lua'},
             \ {'p': '~/.config/nvim/plugin'},
             \ {'t': '~/.tmux.conf'},
             \ {'z': '~/.zshrc'},
