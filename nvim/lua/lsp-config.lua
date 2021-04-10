@@ -3,6 +3,8 @@ vim.g.completion_matching_strategy_list = {'exact', 'substring', 'fuzzy'}
 
 require'lspconfig'.clangd.setup{ on_attach=require'completion'.on_attach }
 require'lspconfig'.tsserver.setup{ on_attach=require'completion'.on_attach }
+require'lspconfig'.rust_analyzer.setup{ on_attach=require'completion'.on_attach }
+
 
 USER = vim.fn.expand('$USER')
 
