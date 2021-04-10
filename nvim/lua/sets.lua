@@ -1,36 +1,33 @@
 USER = vim.fn.expand('$USER')
 
-vim.wo.number = true
-vim.wo.relativenumber = true
+Opt('w', 'number', true)
+Opt('w', 'relativenumber', true)
 
-vim.o.hidden = true
+Opt('o', 'hidden', true)
 
-vim.bo.autoindent = true
-vim.bo.smartindent = true
+Opt('b', 'autoindent', true)
+Opt('b', 'smartindent', true)
 
-vim.o.undodir = 'home/' .. USER .. '/.vimdid'
-vim.o.undofile = true
+local undir = '/home/' .. USER .. '/.vimdid'
+Opt('o', 'undodir', undir)
+Opt('o', 'undofile', true)
 
-vim.o.ruler = true
-vim.o.showcmd = true
-vim.o.mouse = 'a'
-vim.wo.colorcolumn = '80'
-vim.wo.wrap = false
+Opt('o', 'ruler', true)
+Opt('o', 'showcmd', true)
+Opt('o', 'mouse', 'a')
+Opt('w', 'colorcolumn', '80')
+Opt('w', 'wrap', false)
 
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
-vim.o.expandtab = true
-vim.bo.tabstop = 4
-vim.bo.softtabstop = 4
-vim.bo.shiftwidth = 4
-vim.bo.expandtab = true
+Opt('b', 'tabstop', 4)
+Opt('b', 'softtabstop', 4)
+Opt('b', 'shiftwidth', 4)
+Opt('b', 'expandtab', true)
 
-vim.o.hlsearch = false
-vim.o.incsearch = true
+Opt('o', 'hlsearch', false)
+Opt('o', 'incsearch', true)
 
-vim.o.scrolloff = 8
-vim.wo.signcolumn = 'yes'
+Opt('o', 'scrolloff', 8)
+Opt('w', 'signcolumn', 'yes')
 
-vim.o.list = true
-vim.o.listchars ='eol:$,tab:>-,trail:~,extends:>,precedes:<'
+Opt('o', 'list', true)
+Opt('o', 'listchars', 'eol:$,tab:>-,trail:~,extends:>,precedes:<')

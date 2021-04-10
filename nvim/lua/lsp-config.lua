@@ -42,9 +42,9 @@ vim.g.completion_chain_complete_list = {
   },
 }
 
-vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {})
-vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {})
-vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {})
-vim.api.nvim_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {})
-vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {})
-vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {})
+Map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {})
+Map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {})
+Map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {})
+Map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {})
+Map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {})
+Map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {})

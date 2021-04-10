@@ -11,6 +11,9 @@
 -- \/________\_\/
 
 
+-- Load the utils functions used troughtout the config
+require('config-utils')
+
 -- Load base settings
 require('sets')
 
