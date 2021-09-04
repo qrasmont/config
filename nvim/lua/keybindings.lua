@@ -36,3 +36,8 @@ Map('n', '<leader>co', ':copen<cr>', {})
 Map('n', '<leader>cc', ':cclose<cr>', {})
 Map('n', '<C-n>', ':cnext<cr>', {})
 Map('n', '<C-p>', ':cprev<cr>', {})
+
+-- Centered search & Line concat
+Map('n', 'n', 'nzzzv', {})
+Map('n', 'N', 'Nzzzv', {})
+Map('n', 'J', 'mzJ`Z', {})
