@@ -40,3 +40,6 @@ require('treesitter')
 
 -- Load lua line config
 require('lualine-config')
+
+-- Load gitsigns
+require('gitsigns').setup()
