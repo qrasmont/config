@@ -1,10 +1,53 @@
-vim.o.completeopt = 'menuone,noinsert,noselect'
-vim.g.completion_matching_strategy_list = {'exact', 'substring', 'fuzzy'}
+vim.o.completeopt = 'menuone,noselect'
 
-require'lspconfig'.clangd.setup{ on_attach=require'completion'.on_attach }
-require'lspconfig'.tsserver.setup{ on_attach=require'completion'.on_attach }
-require'lspconfig'.rust_analyzer.setup{ on_attach=require'completion'.on_attach }
+vim.opt.shortmess:append "c"
 
+-- Cmp config
+local cmp = require'cmp'
+cmp.setup({
+    completion = {
+      keyword_length = 3,
+    },
+    formatting = {
+        format = function(entry, vim_item)
+            -- fancy icons and a name of kind
+            vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
+
+            -- set a name for each source
+            vim_item.menu = ({
+                buffer = "[Buffer]",
+                nvim_lsp = "[LSP]",
+                luasnip = "[LuaSnip]",
+                nvim_lua = "[Lua]",
+                latex_symbols = "[Latex]",
+            })[entry.source.name]
+            return vim_item
+        end,
+    },
+    sources = {
+        { name = 'nvim_lsp' },
+        { name = 'buffer' },
+        { name = "path" },
+        { name = "nvim_lua" },
+    }
+})
+
+-- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
+local comp_cap = vim.lsp.protocol.make_client_capabilities()
+comp_cap = require('cmp_nvim_lsp').update_capabilities(comp_cap)
+
+require'lspconfig'.clangd.setup{
+    capabilities = comp_cap,
+}
+require'lspconfig'.tsserver.setup{
+    capabilities = comp_cap,
+}
+require'lspconfig'.rust_analyzer.setup{
+    capabilities = comp_cap,
+}
+require'lspconfig'.pyright.setup{
+    capabilities = comp_cap,
+}
 
 USER = vim.fn.expand('$USER')
 
@@ -31,15 +74,6 @@ require'lspconfig'.sumneko_lua.setup {
             }
         }
     }
-}
-
-vim.g.completion_chain_complete_list = {
-  default = {
-    { complete_items = { 'lsp' } },
-    { complete_items = { 'buffers' } },
-    { mode = { '<c-p>' } },
-    { mode = { '<c-n>' } }
-  },
 }
 
 Map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {})

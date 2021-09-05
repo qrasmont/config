@@ -8,8 +8,6 @@ return require('packer').startup(function()
     use {'machakann/vim-highlightedyank'}
 
     use {'neovim/nvim-lspconfig'}
-    use {'nvim-lua/completion-nvim'}
-    use {'steelsojka/completion-buffers'}
 
     use {'dense-analysis/ale'}
     use {'ap/vim-buftabline'}
@@ -39,5 +37,16 @@ return require('packer').startup(function()
         requires = {'nvim-lua/plenary.nvim'},
     }
 
+    use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+            "hrsh7th/vim-vsnip",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-nvim-lua",
+            "onsails/lspkind-nvim",
+        }
+    }
 
 end)
