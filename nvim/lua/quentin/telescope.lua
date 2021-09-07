@@ -33,4 +33,29 @@ local M = {} -- Local table
     end
 
 
+    -- Customise builtin buffer fuzzy find
+    M.current_buffer_fuzzy_find = function()
+        local layout_conf = {
+            prompt_position = 'top',
+        }
+
+        require('telescope.builtin').current_buffer_fuzzy_find({
+            previewer = false,
+            layout_config = layout_conf,
+            sorting_strategy = 'ascending'
+        })
+    end
+
+    -- Customise builtin buffers
+    M.buffers = function()
+        local layout_conf = {
+            prompt_position = 'top',
+        }
+
+        require('telescope.builtin').buffers({
+            previewer = false,
+            layout_config = layout_conf,
+        })
+    end
+
 return M -- Return the table == exports the functions
