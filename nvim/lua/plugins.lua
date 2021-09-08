@@ -25,10 +25,7 @@ return require('packer').startup(function()
     use {'tpope/vim-commentary'}
     use {'tpope/vim-fugitive'}
 
-    use {
-        'hoob3rt/lualine.nvim',
-        requires = {'kyazdani42/nvim-web-devicons', opt = true}
-    }
+    use {'qrasmont/zenline.nvim'}
 
     use {'puremourning/vimspector'}
 
