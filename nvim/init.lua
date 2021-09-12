@@ -43,3 +43,6 @@ require('gitsigns').setup()
 
 -- Load zenline
 require('zenline').setup()
+
+-- Load harpoon
+require('harpoon-config')
