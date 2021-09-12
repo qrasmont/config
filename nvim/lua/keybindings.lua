@@ -17,9 +17,6 @@ Map('n', '<leader>qf', ':q!<cr>', {})
 Map('n', '<leader>,', ':bp<cr>', {})
 Map('n', '<leader>;', ':bn<cr>', {})
 Map('n', '<leader>bk', ':bd<cr>', {})
-Map('n', '<leader>v', ':vsplit<cr>', {})
-Map('n', '<leader>h', ':split<cr>', {})
-Map('n', '<leader>s', ':<C-w><C-w>', {})
 
 --  Cool binding from ThePrimeagen to move highlighted text
 Map('v', 'J', ':m \'>+1<CR>gv=gv', {})
