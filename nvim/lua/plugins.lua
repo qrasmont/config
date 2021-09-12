@@ -10,7 +10,6 @@ return require('packer').startup(function()
     use {'neovim/nvim-lspconfig'}
 
     use {'dense-analysis/ale'}
-    use {'ap/vim-buftabline'}
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
     -- Telescope
