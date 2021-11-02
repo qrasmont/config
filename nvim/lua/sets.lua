@@ -31,3 +31,5 @@ Opt('w', 'signcolumn', 'yes')
 
 Opt('o', 'list', true)
 Opt('o', 'listchars', 'eol:$,tab:>-,trail:~,extends:>,precedes:<')
+
+Opt('o', 'inccommand', 'nosplit') -- live substitution
