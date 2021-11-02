@@ -12,9 +12,10 @@ return require('packer').startup(function()
     use {'dense-analysis/ale'}
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
-    -- Telescope
     use {'nvim-lua/popup.nvim'}
     use {'nvim-lua/plenary.nvim'}
+
+    -- Telescope
     use {'nvim-telescope/telescope.nvim'}
 
     use {'mhinz/vim-startify'}
