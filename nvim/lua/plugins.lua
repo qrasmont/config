@@ -46,5 +46,7 @@ return require('packer').startup(function()
 
     use {'ThePrimeagen/harpoon'}
 
+    use {'qrasmont/projectile.nvim'}
+
 
 end)

@@ -46,3 +46,6 @@ require('zenline').setup()
 
 -- Load harpoon
 require('harpoon-config')
+
+-- Load projectile
+require('projectile-config')

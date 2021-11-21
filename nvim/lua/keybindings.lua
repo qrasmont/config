@@ -25,7 +25,7 @@ Map('v', 'K', ':m \'<-2<CR>gv=gv', {})
 -- Neat X clipboard integration
 -- ,p will paste clipboard into buffer
 -- ,c will copy entire buffer into clipboard
-Map('n', '<leader>p', ':read !xsel --clipboard --output<cr>', {})
+Map('n', '<leader>v', ':read !xsel --clipboard --output<cr>', {})
 Map('n', '<leader>y', ':w !xsel -ib<cr><cr>', {})
 
 -- Quick fix list
@@ -38,3 +38,5 @@ Map('n', '<C-p>', ':cprev<cr>', {})
 Map('n', 'n', 'nzzzv', {})
 Map('n', 'N', 'Nzzzv', {})
 Map('n', 'J', 'mzJ`Z', {})
+
+Map('n', '<leader>t', ':terminal<cr>', {})
