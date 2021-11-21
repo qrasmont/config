@@ -29,7 +29,10 @@ cmp.setup({
         { name = 'buffer' },
         { name = "path" },
         { name = "nvim_lua" },
-    }
+    },
+    experimental = {
+        ghost_text = true,
+    },
 })
 
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
@@ -46,6 +49,9 @@ require'lspconfig'.rust_analyzer.setup{
     capabilities = comp_cap,
 }
 require'lspconfig'.pyright.setup{
+    capabilities = comp_cap,
+}
+require'lspconfig'.gopls.setup{
     capabilities = comp_cap,
 }
 
@@ -82,3 +88,5 @@ Map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {})
 Map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {})
 Map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {})
 Map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {})
+Map('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', {})
+Map('n', 'gf', '<cmd>lua vim.lsp.buf.formatting()<CR>', {})
