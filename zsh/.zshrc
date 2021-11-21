@@ -117,7 +117,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # GO Lang setup
-export GOBIN=/usr/local/go/bin
+export GOBIN="$HOME/.local/go/bin"
 export PATH=$PATH:$GOBIN
 
 source $HOME/.privaterc
