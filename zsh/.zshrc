@@ -39,6 +39,7 @@ alias gdd="git diff HEAD~1 HEAD"
 alias gs="git status"
 alias glg="git log --all --decorate --oneline --graph"
 alias v="nvim"
+alias ls="ls --color=auto"
 
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
