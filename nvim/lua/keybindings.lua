@@ -40,3 +40,4 @@ Map('n', 'N', 'Nzzzv', {})
 Map('n', 'J', 'mzJ`Z', {})
 
 Map('n', '<leader>t', ':terminal<cr>', {})
+Map('t', '<ESC>', '<C-\\><C-n>', {})
