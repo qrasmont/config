@@ -5,6 +5,11 @@ vim.opt.shortmess:append "c"
 -- Cmp config
 local cmp = require'cmp'
 cmp.setup({
+    snippet = { -- REQUIRED
+      expand = function(args)
+        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+      end,
+    },
     completion = {
       keyword_length = 3,
     },
@@ -31,7 +36,11 @@ cmp.setup({
         { name = "nvim_lua" },
     },
     experimental = {
+        native_menu = false,
         ghost_text = true,
+    },
+    mapping = {
+      ['<CR>'] = cmp.mapping.confirm({ select = true }),
     },
 })
 
@@ -58,7 +67,7 @@ require'lspconfig'.gopls.setup{
 USER = vim.fn.expand('$USER')
 
 local sumneko_root_path = "/home/" .. USER .. "/.config/nvim/lua-language-server"
-local sumneko_binary = "/home/" .. USER .. "/.config/nvim/lua-language-server/bin/Linux/lua-language-server"
+local sumneko_binary = "/home/" .. USER .. "/.config/nvim/lua-language-server/bin/lua-language-server"
 
 require'lspconfig'.sumneko_lua.setup {
     cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
