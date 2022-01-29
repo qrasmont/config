@@ -49,3 +49,6 @@ require('harpoon-config')
 
 -- Load projectile
 require('projectile-config')
+
+-- Load fidget
+require('fidget').setup{}
