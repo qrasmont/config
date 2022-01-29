@@ -101,19 +101,19 @@ font:
   normal:
     # Default:
     #   - (Linux/BSD) monospace
-    family: "Hack"
+    family: "Hack NF"
     style: Regular
 
   bold:
-    family: "Hack"
+    family: "Hack NF"
     style: Bold
 
   italic:
-    family: "Hack"
+    family: "Hack NF"
     style: Italic
 
   bold_italic:
-    family: "Hack"
+    family: "Hack NF"
     style: Bold Italic
 
   # Point size
