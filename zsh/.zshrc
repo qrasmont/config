@@ -64,3 +64,11 @@ export PATH="$HOME/gems/bin:$PATH"
 
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
+source /opt/ros/noetic/setup.zsh
+
+alias luamake=/home/quentin/dev/personal/lua-language-server/3rd/luamake/luamake
+
+#Virtualenvwrapper settings:
+export WORKON_HOME=$HOME/.virtualenvs
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
