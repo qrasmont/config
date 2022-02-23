@@ -50,6 +50,7 @@ comp_cap = require('cmp_nvim_lsp').update_capabilities(comp_cap)
 
 require'lspconfig'.clangd.setup{
     capabilities = comp_cap,
+    cmd = { "clangd-12" }
 }
 require'lspconfig'.tsserver.setup{
     capabilities = comp_cap,
@@ -99,3 +100,4 @@ Map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {})
 Map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {})
 Map('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', {})
 Map('n', 'gf', '<cmd>lua vim.lsp.buf.formatting()<CR>', {})
+Map('n', '<leader>cr', '<cmd>lua vim.lsp.buf.rename()<CR>', {})
