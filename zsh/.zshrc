@@ -72,3 +72,6 @@ alias luamake=/home/quentin/dev/personal/lua-language-server/3rd/luamake/luamake
 export WORKON_HOME=$HOME/.virtualenvs
 VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+alias p="projectile"
+export EDITOR=/usr/local/bin/nvim
