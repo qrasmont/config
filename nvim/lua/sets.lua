@@ -32,6 +32,6 @@ vim.o.scrolloff = 8
 Opt('w', 'signcolumn', 'yes')
 
 vim.o.list = true
-vim.o.listchars = 'eol:$,tab:>-,trail:~,extends:>,precedes:<'
+vim.o.listchars = 'tab:▸ ,trail:•,extends:→,precedes:←'
 
 vim.o.inccommand = 'nosplit' -- live substitution
