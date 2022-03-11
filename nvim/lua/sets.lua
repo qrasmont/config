@@ -6,8 +6,9 @@ vim.o.showmode = false
 
 vim.o.hidden = true
 
-Opt('b', 'autoindent', true)
-Opt('b', 'smartindent', true)
+
+vim.o.autoindent = true
+vim.o.smartindent = true
 
 local undir = '/home/' .. USER .. '/.vimdid'
 vim.o.undodir = undir
@@ -16,20 +17,20 @@ vim.o.undofile = true
 vim.o.ruler = true
 vim.o.showcmd = true
 vim.o.mouse = 'a'
-Opt('w', 'colorcolumn', '80')
-Opt('w', 'wrap', false)
+vim.o.colorcolumn = '80'
+vim.o.wrap = true
 
-Opt('b', 'tabstop', 4)
-Opt('b', 'softtabstop', 4)
-Opt('b', 'shiftwidth', 4)
-Opt('b', 'expandtab', true)
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
 
 
 vim.o.hlsearch = false
 vim.o.incsearch = true
 
 vim.o.scrolloff = 8
-Opt('w', 'signcolumn', 'yes')
+vim.o.signcolumn = 'yes'
 
 vim.o.list = true
 vim.o.listchars = 'tab:▸ ,trail:•,extends:→,precedes:←'
