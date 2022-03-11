@@ -4,7 +4,8 @@ return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-    use {'morhetz/gruvbox'}
+    use {'gruvbox-community/gruvbox'}
+
     use {'machakann/vim-highlightedyank'}
 
     use {'neovim/nvim-lspconfig'}
