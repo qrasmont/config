@@ -44,6 +44,29 @@ cmp.setup({
     },
 })
 
+-- TODO figure out new 0.7 api for aucmd and highlight
+vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
+vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
+
+local border = {
+      {"╭", "FloatBorder"},
+      {"─", "FloatBorder"},
+      {"╮", "FloatBorder"},
+      {"│", "FloatBorder"},
+      {"╯", "FloatBorder"},
+      {"─", "FloatBorder"},
+      {"╰", "FloatBorder"},
+      {"│", "FloatBorder"},
+}
+
+-- global border definition for all lang server
+local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+  opts = opts or {}
+  opts.border = opts.border or border
+  return orig_util_open_floating_preview(contents, syntax, opts, ...)
+end
+
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 local comp_cap = vim.lsp.protocol.make_client_capabilities()
 comp_cap = require('cmp_nvim_lsp').update_capabilities(comp_cap)
@@ -99,5 +122,5 @@ Map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {})
 Map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {})
 Map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {})
 Map('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', {})
-Map('n', 'gf', '<cmd>lua vim.lsp.buf.formatting()<CR>', {})
+Map('n', '<leader>cf', '<cmd>lua vim.lsp.buf.formatting()<CR>', {})
 Map('n', '<leader>cr', '<cmd>lua vim.lsp.buf.rename()<CR>', {})
