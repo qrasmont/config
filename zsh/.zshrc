@@ -75,3 +75,7 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 alias p="projectile"
 export EDITOR=/usr/local/bin/nvim
+
+export DOTNET_CLI_TELEMETRY_OPTOUT=1 # What a wonderful world we leave in
+export DOTNET_TOOLS="$HOME/.dotnet/tools"
+export PATH=$PATH:$DOTNET_TOOLS
