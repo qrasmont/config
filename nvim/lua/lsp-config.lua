@@ -88,6 +88,10 @@ require'lspconfig'.gopls.setup{
     capabilities = comp_cap,
 }
 
+require'lspconfig'.csharp_ls.setup{
+    capabilities = comp_cap,
+}
+
 USER = vim.fn.expand('$USER')
 
 local sumneko_root_path = "/home/" .. USER .. "/.config/nvim/lua-language-server"
