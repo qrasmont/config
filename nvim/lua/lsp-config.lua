@@ -90,6 +90,9 @@ require'lspconfig'.gopls.setup{
 
 require'lspconfig'.csharp_ls.setup{
     capabilities = comp_cap,
+    on_attach = function()
+        vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+    end
 }
 
 USER = vim.fn.expand('$USER')
