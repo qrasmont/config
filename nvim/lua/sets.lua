@@ -36,3 +36,5 @@ vim.o.list = true
 vim.o.listchars = 'tab:▸ ,trail:•,extends:→,precedes:←'
 
 vim.o.inccommand = 'nosplit' -- live substitution
+
+vim.o.laststatus = 3
