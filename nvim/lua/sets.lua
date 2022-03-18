@@ -18,7 +18,7 @@ vim.o.ruler = true
 vim.o.showcmd = true
 vim.o.mouse = 'a'
 vim.o.colorcolumn = '80'
-vim.o.wrap = true
+vim.o.wrap = false
 
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
