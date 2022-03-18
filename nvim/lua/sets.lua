@@ -38,3 +38,22 @@ vim.o.listchars = 'tab:▸ ,trail:•,extends:→,precedes:←'
 vim.o.inccommand = 'nosplit' -- live substitution
 
 vim.o.laststatus = 3
+
+vim.o.cursorline = true
+
+-- Show the cursor line in the current buffer only
+local group = vim.api.nvim_create_augroup("CursorLine", { clear = true })
+
+vim.api.nvim_create_autocmd("WinLeave", {
+    group = group,
+    callback = function()
+        vim.opt_local.cursorline = false
+    end,
+})
+
+vim.api.nvim_create_autocmd("WinEnter", {
+    group = group,
+    callback = function()
+        vim.opt_local.cursorline = true
+    end,
+})
