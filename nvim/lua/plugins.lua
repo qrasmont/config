@@ -12,6 +12,8 @@ return require('packer').startup(function()
 
     use {'dense-analysis/ale'}
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use {'nvim-treesitter/playground'}
+
 
     use {'nvim-lua/popup.nvim'}
     use {'nvim-lua/plenary.nvim'}

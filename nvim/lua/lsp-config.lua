@@ -122,12 +122,12 @@ require'lspconfig'.sumneko_lua.setup {
     }
 }
 
-Map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {})
-Map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {})
-Map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {})
-Map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {})
-Map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {})
-Map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {})
-Map('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', {})
-Map('n', '<leader>cf', '<cmd>lua vim.lsp.buf.formatting()<CR>', {})
-Map('n', '<leader>cr', '<cmd>lua vim.lsp.buf.rename()<CR>', {})
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
+vim.keymap.set('n', 'gr', vim.lsp.buf.references)
+vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
+vim.keymap.set('n', 'K', vim.lsp.buf.hover)
+vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help)
+vim.keymap.set('n', 'ga', vim.lsp.buf.code_action)
+vim.keymap.set('n', '<leader>cf', vim.lsp.buf.formatting)
+vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename)

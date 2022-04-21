@@ -29,5 +29,5 @@ vim.cmd([[highlight NotifierText guifg=#fe8019]])
 vim.cmd([[highlight NotifierSuccess guifg=#b8bb26]])
 vim.cmd([[highlight NotifierFail guifg=#fb4934]])
 
-Map('n', '<leader>pp', '<cmd>lua require(\'projectile\').run()<cr>', {})
-Map('n', '<leader>po', '<cmd>lua require(\'projectile\').toggle_output()<cr>', {})
+vim.keymap.set('n', '<leader>pp', function() return require('projectile').run() end)
+vim.keymap.set('n', '<leader>po', function() return require('projectile').toggle_output() end)

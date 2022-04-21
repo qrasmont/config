@@ -1,43 +1,43 @@
 vim.g.mapleader = ' '
 
 -- Disable arrow keys, We don't that around here !!
-Map('n', '<up>', '<nop>', {})
-Map('n', '<down>', '<nop>', {})
-Map('i', '<up>', '<nop>', {})
-Map('i', '<down>', '<nop>', {})
-Map('i', '<left>', '<nop>', {})
-Map('i', '<right>', '<nop>', {})
+vim.keymap.set('n', '<up>', '<nop>')
+vim.keymap.set('n', '<down>', '<nop>')
+vim.keymap.set('i', '<up>', '<nop>')
+vim.keymap.set('i', '<down>', '<nop>')
+vim.keymap.set('i', '<left>', '<nop>')
+vim.keymap.set('i', '<right>', '<nop>')
 
 -- Save & Quit
-Map('n', '<leader>w', ':w<cr>', {})
-Map('n', '<leader>qq', ':q<cr>', {})
-Map('n', '<leader>qf', ':q!<cr>', {})
+vim.keymap.set('n', '<leader>w', ':w<cr>')
+vim.keymap.set('n', '<leader>qq', ':q<cr>')
+vim.keymap.set('n', '<leader>qf', ':q!<cr>')
 
 -- Buffer
-Map('n', '<leader>,', ':bp<cr>', {})
-Map('n', '<leader>;', ':bn<cr>', {})
-Map('n', '<leader>bk', ':bd<cr>', {})
+vim.keymap.set('n', '<leader>,', ':bp<cr>')
+vim.keymap.set('n', '<leader>;', ':bn<cr>')
+vim.keymap.set('n', '<leader>bk', ':bd<cr>')
 
 --  Cool binding from ThePrimeagen to move highlighted text
-Map('v', 'J', ':m \'>+1<CR>gv=gv', {})
-Map('v', 'K', ':m \'<-2<CR>gv=gv', {})
+vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv')
+vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv')
 
 -- Neat X clipboard integration
 -- ,p will paste clipboard into buffer
 -- ,c will copy entire buffer into clipboard
-Map('n', '<leader>v', ':read !xsel --clipboard --output<cr>', {})
-Map('n', '<leader>y', ':w !xsel -ib<cr><cr>', {})
+vim.keymap.set('n', '<leader>v', ':read !xsel --clipboard --output<cr>')
+vim.keymap.set('n', '<leader>y', ':w !xsel -ib<cr><cr>')
 
 -- Quick fix list
-Map('n', '<leader>co', ':copen<cr>', {})
-Map('n', '<leader>cc', ':cclose<cr>', {})
-Map('n', '<C-n>', ':cnext<cr>', {})
-Map('n', '<C-p>', ':cprev<cr>', {})
+vim.keymap.set('n', '<leader>co', ':copen<cr>')
+vim.keymap.set('n', '<leader>cc', ':cclose<cr>')
+vim.keymap.set('n', '<C-n>', ':cnext<cr>')
+vim.keymap.set('n', '<C-p>', ':cprev<cr>')
 
 -- Centered search & Line concat
-Map('n', 'n', 'nzzzv', {})
-Map('n', 'N', 'Nzzzv', {})
-Map('n', 'J', 'mzJ`Z', {})
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+vim.keymap.set('n', 'J', 'mzJ`Z')
 
-Map('n', '<leader>t', ':terminal<cr>', {})
-Map('t', '<ESC>', '<C-\\><C-n>', {})
+vim.keymap.set('n', '<leader>t', ':terminal<cr>')
+vim.keymap.set('n', '<ESC>', '<C-\\><C-n>')
