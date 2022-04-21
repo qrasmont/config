@@ -39,9 +39,9 @@ cmp.setup({
         native_menu = false,
         ghost_text = true,
     },
-    mapping = {
+    mapping = cmp.mapping.preset.insert({
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    },
+    }),
 })
 
 -- TODO figure out new 0.7 api for aucmd and highlight
