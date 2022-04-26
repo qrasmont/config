@@ -6,7 +6,7 @@ require("harpoon").setup({
 })
 
 
-vim.keymap.set('n', '<leader>ha', function() return require('harpoon.ui').add_file() end)
+vim.keymap.set('n', '<leader>ha', function() return require('quentin.harpoon').add_file() end)
 vim.keymap.set('n', '<leader>hh', function() return require('harpoon.ui').toggle_quick_menu() end)
 
 vim.keymap.set('n', '<leader>&', function() return require('harpoon.ui').nav_file(1) end)
