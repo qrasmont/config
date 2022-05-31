@@ -54,4 +54,6 @@ return require('packer').startup(function()
     use {'qrasmont/projectile.nvim'}
 
     use {'j-hui/fidget.nvim'}
+
+    use { "SmiteshP/nvim-gps"}
 end)

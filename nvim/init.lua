@@ -52,3 +52,6 @@ require('projectile-config')
 
 -- Load fidget
 require('fidget').setup{}
+
+-- Load nvim-gps config
+require("nvim-gps").setup()
