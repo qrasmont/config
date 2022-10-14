@@ -41,6 +41,9 @@ vim.o.laststatus = 3
 
 vim.o.cursorline = true
 
+vim.opt_global.cmdheight = 0
+vim.opt_global.spell = true
+
 -- Show the cursor line in the current buffer only
 local group = vim.api.nvim_create_augroup("CursorLine", { clear = true })
 
