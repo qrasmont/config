@@ -39,5 +39,9 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', 'J', 'mzJ`Z')
 
+-- Centered vertical move
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+
 vim.keymap.set('n', '<leader>t', ':terminal<cr>')
 vim.keymap.set('n', '<ESC>', '<C-\\><C-n>')
