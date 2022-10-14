@@ -5,6 +5,7 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
     use {'gruvbox-community/gruvbox'}
+    use {'folke/tokyonight.nvim'}
 
     use {'machakann/vim-highlightedyank'}
 
