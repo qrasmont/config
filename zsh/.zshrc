@@ -79,3 +79,11 @@ export EDITOR=/usr/local/bin/nvim
 export DOTNET_CLI_TELEMETRY_OPTOUT=1 # What a wonderful world we leave in
 export DOTNET_TOOLS="$HOME/.dotnet/tools"
 export PATH=$PATH:$DOTNET_TOOLS
+
+# Pyenv environment variables
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+# Pyenv initialization
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init --path)"
+fi
