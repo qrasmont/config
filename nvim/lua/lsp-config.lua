@@ -69,7 +69,7 @@ end
 
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 local comp_cap = vim.lsp.protocol.make_client_capabilities()
-comp_cap = require('cmp_nvim_lsp').update_capabilities(comp_cap)
+comp_cap = require('cmp_nvim_lsp').default_capabilities(comp_cap)
 
 require'lspconfig'.clangd.setup{
     capabilities = comp_cap,
@@ -100,7 +100,7 @@ USER = vim.fn.expand('$USER')
 local sumneko_root_path = "/home/" .. USER .. "/.config/nvim/lua-language-server"
 local sumneko_binary = "/home/" .. USER .. "/.config/nvim/lua-language-server/bin/lua-language-server"
 
-require'lspconfig'.sumneko_lua.setup {
+require'lspconfig'.lua_ls.setup {
     cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
     settings = {
         Lua = {
