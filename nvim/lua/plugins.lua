@@ -12,8 +12,13 @@ return require('packer').startup(function()
     use {'neovim/nvim-lspconfig'}
 
     use {'dense-analysis/ale'}
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    use {'nvim-treesitter/playground'}
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
 
 
     use {'nvim-lua/popup.nvim'}
