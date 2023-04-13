@@ -29,6 +29,11 @@ return require('packer').startup(function()
     use {'tpope/vim-commentary'}
     use {'tpope/vim-fugitive'}
 
+    use {
+        "SmiteshP/nvim-navic",
+        requires = "neovim/nvim-lspconfig"
+    }
+
     use {'qrasmont/zenline.nvim'}
 
     use {'puremourning/vimspector'}
@@ -55,6 +60,4 @@ return require('packer').startup(function()
     use {'qrasmont/projectile.nvim'}
 
     use {'j-hui/fidget.nvim'}
-
-    use { "SmiteshP/nvim-gps"}
 end)

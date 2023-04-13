@@ -3,7 +3,15 @@ vim.o.completeopt = 'menuone,noselect'
 vim.opt.shortmess:append "c"
 
 -- Cmp config
+local navic = require'nvim-navic'
 local cmp = require'cmp'
+
+local on_attach = function(client, bufnr)
+    if client.server_capabilities.documentSymbolProvider then
+        navic.attach(client, bufnr)
+    end
+end
+
 cmp.setup({
     snippet = { -- REQUIRED
       expand = function(args)
@@ -73,19 +81,24 @@ comp_cap = require('cmp_nvim_lsp').default_capabilities(comp_cap)
 
 require'lspconfig'.clangd.setup{
     capabilities = comp_cap,
-    cmd = { "clangd-12" }
+    cmd = { "clangd-12" },
+    on_attach = on_attach
 }
 require'lspconfig'.tsserver.setup{
     capabilities = comp_cap,
+    on_attach = on_attach
 }
 require'lspconfig'.rust_analyzer.setup{
     capabilities = comp_cap,
+    on_attach = on_attach
 }
 require'lspconfig'.pyright.setup{
     capabilities = comp_cap,
+    on_attach = on_attach
 }
 require'lspconfig'.gopls.setup{
     capabilities = comp_cap,
+    on_attach = on_attach
 }
 
 require'lspconfig'.csharp_ls.setup{
@@ -97,6 +110,7 @@ require'lspconfig'.csharp_ls.setup{
 
 require'lspconfig'.bashls.setup{
     capabilities = comp_cap,
+    on_attach = on_attach
 }
 
 USER = vim.fn.expand('$USER')

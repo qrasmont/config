@@ -41,6 +41,9 @@ require('treesitter')
 -- Load gitsigns
 require('gitsigns').setup()
 
+-- Load nvim-navic
+require('nvim-navic').setup()
+
 -- Load zenline
 require('zenline').setup()
 
@@ -52,6 +55,3 @@ require('projectile-config')
 
 -- Load fidget
 require('fidget').setup{}
-
--- Load nvim-gps config
-require("nvim-gps").setup()
