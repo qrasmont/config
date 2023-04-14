@@ -20,7 +20,7 @@ require('sets')
 -- Load global keybindings
 require('keybindings')
 
--- Load plugin list (packer)
+-- Load plugin list (lazy.nvim)
 require('plugins')
 
 -- Load color settings

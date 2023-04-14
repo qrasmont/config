@@ -1,56 +1,64 @@
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
-return require('packer').startup(function()
-    -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-    use {'gruvbox-community/gruvbox'}
-    use {'folke/tokyonight.nvim'}
+return require('lazy').setup({
+    'gruvbox-community/gruvbox',
+    'folke/tokyonight.nvim',
 
-    use {'machakann/vim-highlightedyank'}
+    'machakann/vim-highlightedyank',
 
-    use {'neovim/nvim-lspconfig'}
+    'neovim/nvim-lspconfig',
 
-    use {'dense-analysis/ale'}
-    use {
+    'dense-analysis/ale',
+    {
         'nvim-treesitter/nvim-treesitter',
-        run = function()
+        build = function()
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
             ts_update()
         end,
-    }
+    },
 
 
-    use {'nvim-lua/popup.nvim'}
-    use {'nvim-lua/plenary.nvim'}
+    'nvim-lua/popup.nvim',
+    'nvim-lua/plenary.nvim',
 
     -- Telescope
-    use {'nvim-telescope/telescope.nvim',
-        requires = {'kyazdani42/nvim-web-devicons'},
-    }
+    {'nvim-telescope/telescope.nvim',
+        dependencies = {'kyazdani42/nvim-web-devicons'},
+    },
 
-    use {'jiangmiao/auto-pairs'}
+    'jiangmiao/auto-pairs',
 
-    use {'tpope/vim-commentary'}
-    use {'tpope/vim-fugitive'}
+    'tpope/vim-commentary',
+    'tpope/vim-fugitive',
 
-    use {
+    {
         "SmiteshP/nvim-navic",
-        requires = "neovim/nvim-lspconfig"
-    }
+        dependencies = "neovim/nvim-lspconfig"
+    },
 
-    use {'qrasmont/zenline.nvim'}
+    'qrasmont/zenline.nvim',
 
-    use {'puremourning/vimspector'}
+    'puremourning/vimspector',
 
-    use {
+    {
         'lewis6991/gitsigns.nvim',
-        requires = {'nvim-lua/plenary.nvim'},
-    }
+        dependencies = {'nvim-lua/plenary.nvim'},
+    },
 
-    use {
+    {
         "hrsh7th/nvim-cmp",
-        requires = {
+       dependencies = {
             "hrsh7th/vim-vsnip",
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-nvim-lsp",
@@ -58,11 +66,11 @@ return require('packer').startup(function()
             "hrsh7th/cmp-nvim-lua",
             "onsails/lspkind-nvim",
         }
-    }
+    },
 
-    use {'ThePrimeagen/harpoon'}
+    'ThePrimeagen/harpoon',
 
-    use {'qrasmont/projectile.nvim'}
+    'qrasmont/projectile.nvim',
 
-    use {'j-hui/fidget.nvim'}
-end)
+    'j-hui/fidget.nvim',
+})
