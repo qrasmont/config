@@ -45,3 +45,6 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 
 vim.keymap.set('n', '<leader>t', ':terminal<cr>')
 vim.keymap.set('n', '<ESC>', '<C-\\><C-n>')
+
+-- Replace word under cursor in file
+vim.keymap.set( 'n', '<leader>r', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>')
