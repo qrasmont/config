@@ -90,3 +90,6 @@ fi
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+export ZIG="$HOME/.local/zig-linux-x86_64-0.11.0-dev.2661+d2a799c65"
+export PATH=$PATH:$ZIG
