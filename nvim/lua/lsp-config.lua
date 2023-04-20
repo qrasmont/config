@@ -1,4 +1,4 @@
-USER = vim.fn.expand('$USER')
+HOME = vim.fn.expand('$HOME')
 
 vim.o.completeopt = 'menuone,noselect'
 
@@ -116,12 +116,12 @@ require'lspconfig'.bashls.setup{
 }
 require'lspconfig'.zls.setup{
     capabilities = comp_cap,
-    cmd = { "/home/".. USER .."/dev/personal/zls/zig-out/bin/zls" },
+    cmd = { HOME .."/dev/personal/zls/zig-out/bin/zls" },
     on_attach = on_attach
 }
 
-local sumneko_root_path = "/home/" .. USER .. "/.config/nvim/lua-language-server"
-local sumneko_binary = "/home/" .. USER .. "/.config/nvim/lua-language-server/bin/lua-language-server"
+local sumneko_root_path = HOME .. "/.config/nvim/lua-language-server"
+local sumneko_binary = HOME .. "/.config/nvim/lua-language-server/bin/lua-language-server"
 
 require'lspconfig'.lua_ls.setup {
     cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},

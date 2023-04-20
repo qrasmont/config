@@ -1,4 +1,4 @@
-USER = vim.fn.expand('$USER')
+HOME = vim.fn.expand('$HOME')
 
 vim.o.number = true
 vim.o.relativenumber = true
@@ -10,7 +10,7 @@ vim.o.hidden = true
 vim.o.autoindent = true
 vim.o.smartindent = true
 
-local undir = '/home/' .. USER .. '/.vimdid'
+local undir = HOME .. '/.vimdid'
 vim.o.undodir = undir
 vim.o.undofile = true
 
