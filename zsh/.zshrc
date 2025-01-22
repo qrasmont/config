@@ -64,7 +64,6 @@ export PATH="$HOME/gems/bin:$PATH"
 
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
-source /opt/ros/noetic/setup.zsh
 
 alias luamake=/home/quentin/dev/personal/lua-language-server/3rd/luamake/luamake
 
@@ -91,5 +90,5 @@ fi
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
-export ZIG="$HOME/.local/zig-linux-x86_64-0.11.0-dev.2661+d2a799c65"
+export ZIG="$HOME/.local/zig-linux-x86_64-0.13.0"
 export PATH=$PATH:$ZIG
