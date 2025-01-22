@@ -73,4 +73,14 @@ return require('lazy').setup({
     'qrasmont/projectile.nvim',
 
     'j-hui/fidget.nvim',
+
+    {
+        "folke/lazydev.nvim",
+        ft = "lua",
+        opts = {
+            library = {
+                { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+            },
+        },
+    },
 })
