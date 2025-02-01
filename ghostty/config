@@ -15,6 +15,5 @@ keybind = ctrl+b>n=next_tab
 keybind = ctrl+b>p=previous_tab
 keybind = ctrl+b>h=goto_split:left
 keybind = ctrl+b>l=goto_split:right
-
-#keybind = ctrl+b>k=goto_split:up
-#keybind = ctrl+b>j=goto_split:down
+keybind = ctrl+b>k=goto_split:top
+keybind = ctrl+b>j=goto_split:bottom
