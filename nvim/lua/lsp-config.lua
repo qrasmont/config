@@ -86,7 +86,7 @@ require'lspconfig'.clangd.setup{
     cmd = { "clangd-12" },
     on_attach = on_attach
 }
-require'lspconfig'.tsserver.setup{
+require'lspconfig'.ts_ls.setup{
     capabilities = comp_cap,
     on_attach = on_attach
 }
