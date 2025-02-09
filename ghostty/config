@@ -1,11 +1,17 @@
 theme = tokyonight
+window-theme = ghostty
 gtk-titlebar = false
+gtk-tabs-location = bottom
 window-decoration = false
+mouse-hide-while-typing = true
+
 font-family = "Hack Nerd Font"
+
 adjust-cursor-thickness = 50%
 cursor-color = #ff9e64
+
 resize-overlay = never
-copy-on-select = true
+copy-on-select = clipboard
 shell-integration-features = true
 
 keybind = ctrl+b>c=new_tab
